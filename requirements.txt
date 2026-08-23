@@ -1,0 +1,14 @@
+# NetSage AI - dependencies
+#
+# Core (required to run checker.py, src/diagnosis.py, and the tests):
+pytest>=7.4
+anthropic>=0.40
+python-dotenv>=1.0
+
+# Dashboard (Phase 4 - required to run app/dashboard.py):
+streamlit>=1.62
+plotly>=6.9
+
+# Optional (data work, listed here early so the environment is ready when
+# you get there):
+pandas>=2.0

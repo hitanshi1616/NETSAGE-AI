@@ -1,0 +1,14 @@
+case_id,final_diagnosis,verification_status,before_evidence,after_evidence,verification_reason,timestamp,checks_evaluated
+C001,"VLAN 10 is assigned to Fa0/5 but does not exist in the VLAN database, leaving the port inactive.",Resolved,"SW1#show interfaces fa0/5 switchport
+Name: Fa0/5
+Switchport: Enabled
+Administrative Mode: static access
+Operational Mode: static access
+Access Mode VLAN: 10 (Inactive)
+Trunking Native Mode VLAN: 1 (default)
+
+SW1#show vlan brief
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+20   ENGINEERING                      active    Fa0/6, Fa0/7","10 SALES active Fa0/5; 20 ENGINEERING active Fa0/6, Fa0/7",[missing_vlan] VLAN 10 now appears in the after-evidence's VLAN database.,2026-08-23T19:59:15.430886+00:00,"[""missing_vlan""]"
